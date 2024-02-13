@@ -1,0 +1,19 @@
+{{#> Form h1="Вход"}}
+{{> Input placeholder="Логин" label="" class="primary" type="text" name="login"}}
+{{> Input placeholder="Пароль" label=""class="primary" type="password" name="password"}}
+{{> Button label="Вход" class="primary" page="chat"}}
+{{> Link label="Зарегистрироваться " type="link" page="register"}}
+{{/Form}}
+<nav class="menu">
+	<ul>
+		<li>{{> Link label="404 ошибка" type="link" page="404"}}</li>
+		<li>{{> Link label="500 ошибка" type="link" page="500"}}</li>
+		<li>{{> Link label="Профиль" type="link" page="profile"}}</li>
+		<li>{{> Link label="Профиль редактирование с ошибкой добавления аватара" type="link" page="profile-change"}}</li>
+		<li>{{> Link label="Чат без фич" type="link" page="chat"}}</li>
+		<li>{{> Link label="Чат с фичами" type="link" page="chat-user"}}</li>
+		<li>{{> Link label="Удалить пользователя в пустом чате" type="link" page="chat-user-delete"}}</li>
+		<li>{{> Link label="Вход" type="link" page="login"}}</li>
+		<li>{{> Link label="Регистрация" type="link" page="register"}}</li>
+	</ul>
+</nav>
