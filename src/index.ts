@@ -4,8 +4,6 @@ import * as Layouts from './layouts';
 import { navigate } from './utils/navigate.ts';
 import { registerComponent } from './utils/registerComponents.ts';
 
-
-
 Object.entries(Layouts).forEach(([name, layout]) => {
 	Handlebars.registerPartial(name, layout);
 });
