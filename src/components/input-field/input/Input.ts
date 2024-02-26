@@ -36,11 +36,6 @@ export class Input extends Block<IInputProps> {
 			name = "${name}"
 			autocomplete = "false"
 			 ${disabled ? 'disabled' : ''}
-/>`;
+		/>`;
 	}
 }
-
-
-
-
-

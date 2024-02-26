@@ -1,6 +1,6 @@
 import Block from '../../utils/Block';
 import { navigate } from '../../utils/navigate';
-import './error.less'
+import './error.less';
 
 interface PageErrorProps {
 	errorNumber: number;
@@ -8,7 +8,6 @@ interface PageErrorProps {
 	errorText: string;
 	onChat: (e: Event) => void;
 }
-
 
 export class PageError extends Block<PageErrorProps> {
 	constructor() {
@@ -36,6 +35,6 @@ export class PageError extends Block<PageErrorProps> {
 					{{{ Button label="Вернуться к чатам" className="primary" page="chat" onClick=onChat }}}
 				</div>
 			</main>
-		`
+		`;
 	}
 }

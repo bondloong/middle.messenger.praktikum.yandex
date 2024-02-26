@@ -3,19 +3,19 @@ import Block from '../../../../utils/Block';
 import { InputText } from '../../../input-text';
 
 type Ref = {
-	sendMessage: InputText;
-}
+	message: InputText;
+};
 
 interface IMessagesFooterProps {
-	sendMessage: string;
-	showFileSendSettings: (e: Event) => void
+	message: string;
+	showFileSendSettings: (e: Event) => void;
 }
 
 export class MessagesFooter extends Block<IMessagesFooterProps, Ref> {
 	constructor(props: IMessagesFooterProps) {
 		super({
 			...props,
-			sendMessage: "",
+			message: '',
 			showFileSendSettings(event: Event) {
 				event.preventDefault();
 				const fileSendSettings = document.getElementById('messages__file-send-settings');
@@ -24,14 +24,12 @@ export class MessagesFooter extends Block<IMessagesFooterProps, Ref> {
 					fileSendSettings.classList.toggle('hidden');
 					fileSendSettingsButton?.classList.toggle('button__active');
 				}
-			}
+			},
 		});
 	}
 
-
-
 	protected render(): string {
-		const { sendMessage } = this.props;
+		const { message } = this.props;
 		return `
             <div class="messages__footer">
                 <div>
@@ -53,13 +51,13 @@ export class MessagesFooter extends Block<IMessagesFooterProps, Ref> {
                 </div>
 				<div style="width: 100%">
 					{{{InputText
-							id="sendMessage"
-				            name="sendMessage"
+							id="message"
+				            name="message"
 							placeholder="Сообщение"
 				            type="text"
-				            ref="sendMessage"
+				            ref="message"
 							className="grey"
-							value="${sendMessage}"
+							value="${message}"
 						}}}
 				</div>
 				<div>

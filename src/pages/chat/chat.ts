@@ -1,13 +1,11 @@
 import Block from '../../utils/Block';
 import { IChat, IChatInfo, chats, chat } from '../../utils/constants';
-import './chat.less'
-
+import './chat.less';
 
 interface IChatProps {
 	chats: IChat[];
 	chat: IChatInfo;
 }
-
 
 export class PageChat extends Block<IChatProps> {
 	constructor() {
@@ -23,6 +21,6 @@ export class PageChat extends Block<IChatProps> {
 				{{{ChatContent chats=chats }}}
 				{{{Messages chat=chat}}}
 			</main>
-		`
+		`;
 	}
 }

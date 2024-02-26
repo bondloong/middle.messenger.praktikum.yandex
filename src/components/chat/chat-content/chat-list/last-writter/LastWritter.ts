@@ -1,16 +1,14 @@
-import Block from '../../../../../utils/Block'
-
-type Ref = {}
+import Block from '../../../../../utils/Block';
 
 interface ILastWritterProps {
-	lastWritterLogin: string
+	lastWritterLogin: string;
 }
 
-export class LastWritter extends Block<ILastWritterProps, Ref> {
+export class LastWritter extends Block<ILastWritterProps> {
 	constructor(props: ILastWritterProps) {
 		const updatedProps = {
 			...props,
-			lastWritterLogin: props.lastWritterLogin === "@You" ? "Вы" : props.lastWritterLogin,
+			lastWritterLogin: props.lastWritterLogin === '@You' ? 'Вы' : props.lastWritterLogin,
 		};
 
 		super(updatedProps);

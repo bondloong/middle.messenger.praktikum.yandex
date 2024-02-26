@@ -2,7 +2,7 @@ import Handlebars, { HelperOptions } from 'handlebars';
 import Block, { RefType } from './Block.ts';
 
 interface BlockConstructable<Props extends object, R extends RefType> {
-  new (props: Props): Block<Props, R>;
+  new(props: Props): Block<Props, R>;
 }
 
 export function registerComponent<Props extends object, R extends RefType>(

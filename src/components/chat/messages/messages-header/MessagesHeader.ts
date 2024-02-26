@@ -1,7 +1,6 @@
 import { PlusIcon } from '../../../../assets';
-import Block from '../../../../utils/Block'
-import { IChatInfo } from '../../../../utils/constants'
-
+import Block from '../../../../utils/Block';
+import { IChatInfo } from '../../../../utils/constants';
 
 interface IMessagesHeaderProps {
 	chat: IChatInfo;
@@ -35,12 +34,13 @@ export class MessagesHeader extends Block<IMessagesHeaderProps> {
 					fileSendSettings.classList.toggle('button__grey_active');
 				}
 			},
-		})
+		});
 	}
 
 	protected render(): string {
-		const { chat: { avatar, chatName } } = this.props
-
+		const {
+			chat: { avatar, chatName },
+		} = this.props;
 		return `
 			<div class="messages__header">
 		          <div class="messages__sender">
@@ -57,6 +57,6 @@ export class MessagesHeader extends Block<IMessagesHeaderProps> {
 					{{{ Button className="primary "icon="${PlusIcon}" label="Добавить в друзья" id="frendship" onClick=changeFriendStatus }}}
 		          </div>
 	        </div>
-		`
+		`;
 	}
 }

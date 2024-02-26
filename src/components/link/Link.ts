@@ -26,20 +26,17 @@ export class Link extends Block<ILinkProps> {
 
 	protected render(): string {
 		const { type, id, className, style, title, label, page } = this.props;
-
-
 		return `
-		<a
-		   class="link link__${className}"
-		   href="#"
-		  ${page ? `page="${page}"` : ``}
-		  ${id ? `id="${id}"` : ``}
-		  ${style ? `style="${style}"` : ``}
-		  ${title ? `title="${title}"` : ``}
-		  ${type ? `icon="${type}"` : ``}
+		<a 	class="link link__${className}"
+			href="#"
+			${page ? `page="${page}"` : ``}
+			${id ? `id="${id}"` : ``}
+			${style ? `style="${style}"` : ``}
+			${title ? `title="${title}"` : ``}
+			${type ? `icon="${type}"` : ``}
 		>	  
-		  ${label ? `${label}` : ""}
+			${label ? `${label}` : ''}
 		</a>
-		`
+		`;
 	}
 }

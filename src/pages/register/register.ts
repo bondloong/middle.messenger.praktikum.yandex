@@ -2,7 +2,6 @@ import { InputField } from '../../components/index.ts';
 import Block from '../../utils/Block.ts';
 import { navigate } from '../../utils/navigate.ts';
 import * as validators from '../../utils/validators.ts';
-import './register.less'
 
 type Ref = {
 	email: InputField;
@@ -153,7 +152,6 @@ export class PageRegister extends Block<IRegistrationPageProps, Ref> {
 				{{{ Button label="Зарегистрироваться" className="primary" page="login" onClick=onRegistration}}}
 				{{{ Link label="Войти " className="link" page="login" onClick=onLogin }}}
 		{{/Form}}
-		`
+		`;
 	}
 }
-

@@ -1,15 +1,15 @@
-import Block from '../../../../utils/Block'
+import Block from '../../../../utils/Block';
 import { IChat } from '../../../../utils/constants.ts';
 
 interface IChatListProps {
-	chats: IChat[]
+	chats: IChat[];
 }
 
 export class ChatList extends Block<IChatListProps> {
 	constructor(props: IChatListProps) {
 		super({
 			...props,
-		})
+		});
 	}
 
 	protected render(): string {
@@ -26,6 +26,6 @@ export class ChatList extends Block<IChatListProps> {
 				  {{{ Button className="grey " label="Отменить" id="popup-close" }}}
 				{{/Popup}}
 		    </div>
-		`
+		`;
 	}
 }

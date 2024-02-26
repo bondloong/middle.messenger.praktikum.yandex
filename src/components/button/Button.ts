@@ -1,5 +1,5 @@
 import Block from '../../utils/Block';
-import './button.less'
+import './button.less';
 
 interface IButtonProps {
 	className: string;
@@ -39,8 +39,8 @@ export class Button extends Block<IButtonProps> {
 		  
 		    ${icon ? `<img src="${icon}" alt="Button Icon" ${page && `page="${page}"`} />` : ``}
 		  
-		  ${label ? `${label}` : ""}
+		  ${label ? `${label}` : ''}
 		</button>
-		`
+		`;
 	}
 }

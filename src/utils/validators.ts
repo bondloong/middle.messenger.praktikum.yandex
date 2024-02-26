@@ -19,7 +19,11 @@ export const login = (value: string) => {
 
 export const password = (value: string) => {
 	const regex = /^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,40}$/;
-	return validate(value, regex, 'Пароль должен содержать как минимум одну заглавную букву и одну цифру и минимум 8 символов');
+	return validate(
+		value,
+		regex,
+		'Пароль должен содержать как минимум одну заглавную букву и одну цифру и минимум 8 символов',
+	);
 };
 
 export const changePassword = (oldPassword: string, newPassword: string) => {
@@ -27,7 +31,7 @@ export const changePassword = (oldPassword: string, newPassword: string) => {
 		return 'Поле обязательно к заполнению';
 	}
 	if (oldPassword === newPassword) {
-		return "Новый пароль совпадает со старым";
+		return 'Новый пароль совпадает со старым';
 	}
 	return false;
 };

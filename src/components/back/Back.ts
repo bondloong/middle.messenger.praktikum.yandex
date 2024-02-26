@@ -4,10 +4,9 @@ import { ArrowIcon } from '../../assets';
 import { navigate } from '../../utils/navigate';
 import './back.less';
 
-
 type Ref = {
 	button: Button;
-}
+};
 
 interface iBackProps {
 	page: string;
@@ -35,7 +34,6 @@ export class Back extends Block<iBackProps, Ref> {
 					onClick=onBack
 				}}}
 			</div>
-		`
+		`;
 	}
-
 }

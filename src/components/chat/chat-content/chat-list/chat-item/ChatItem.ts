@@ -1,21 +1,16 @@
-import Block from '../../../../../utils/Block'
+import Block from '../../../../../utils/Block';
 import { navigate } from '../../../../../utils/navigate.ts';
 import { IChat } from '../../../../../utils/constants.ts';
-import { nanoid } from 'nanoid'
-
-type Ref = {
-
-}
+import { nanoid } from 'nanoid';
 
 interface IChatItemProps {
-	chat: IChat
+	chat: IChat;
 	id: string;
 	onProfile: (e: any) => void;
 	showChatSettings: (e: Event) => void;
-
 }
 
-export class ChatItem extends Block<IChatItemProps, Ref> {
+export class ChatItem extends Block<IChatItemProps> {
 	constructor(props: IChatItemProps) {
 		super({
 			...props,
@@ -31,12 +26,12 @@ export class ChatItem extends Block<IChatItemProps, Ref> {
 					fileSendSettings.classList.toggle('hidden');
 				}
 			},
-		})
+		});
 	}
 
 	protected render(): string {
-		const { chatId, target, avatar, chatName, lastWritterLogin, lastMessage, upd, unReading, } = this.props.chat
-		const { id } = this.props
+		const { chatId, target, avatar, chatName, lastWritterLogin, lastMessage, upd, unReading } = this.props.chat;
+		const { id } = this.props;
 		return `
 			<div class="chat__item-wrapper {{#if ${target}}}chat__item-wrapper_target{{/if}} ">
 				  {{#if  ${target}}}
@@ -64,6 +59,6 @@ export class ChatItem extends Block<IChatItemProps, Ref> {
 			        </div>
 			      </div>
 		      </div>
-		`
+		`;
 	}
 }

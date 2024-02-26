@@ -1,8 +1,7 @@
 import Block from '../../utils/Block.ts';
 import { InputError } from './input-error/InputError.ts';
-import { Input } from './input/Input.ts'
-import './input.less'
-
+import { Input } from './input/Input.ts';
+import './input.less';
 
 interface IInputFieldProps {
 	placeholder?: string;
@@ -39,8 +38,6 @@ export class InputField extends Block<IInputFieldProps, Ref> {
 
 	protected render(): string {
 		const { placeholder, id, name, type, value, disabled, className, title } = this.props;
-
-
 		return `
 			  <div class="input-block" >
 				<label class="input-block__label" >
@@ -60,7 +57,7 @@ export class InputField extends Block<IInputFieldProps, Ref> {
 					}}}
 				</label>
 				</div>
-		`
+		`;
 	}
 
 	private validate(): boolean | string {
@@ -74,8 +71,3 @@ export class InputField extends Block<IInputFieldProps, Ref> {
 		return true;
 	}
 }
-
-
-
-
-

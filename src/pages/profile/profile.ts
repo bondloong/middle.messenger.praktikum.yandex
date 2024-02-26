@@ -3,9 +3,7 @@ import { InputField } from '../../components/index.ts';
 import Block from '../../utils/Block.ts';
 import { navigate } from '../../utils/navigate.ts';
 import * as validators from '../../utils/validators.ts';
-import './profile.less'
-
-
+import './profile.less';
 
 type Ref = {
 	//avatar: Avatar;
@@ -57,7 +55,7 @@ export class PageProfile extends Block<IProfilePageProps, Ref> {
 			phone: '+79099673030',
 			newPassword: '',
 			oldPassword: '',
-			hide: "",
+			hide: '',
 			onEditProfile: (event) => {
 				event.preventDefault();
 				const email = this.refs.email.value();
@@ -91,7 +89,7 @@ export class PageProfile extends Block<IProfilePageProps, Ref> {
 			},
 			onHidePopup: (e) => {
 				e.preventDefault();
-				this.props.hide = "true";
+				this.props.hide = 'true';
 			},
 			onLogOut: (e) => {
 				e.preventDefault();
@@ -111,8 +109,8 @@ export class PageProfile extends Block<IProfilePageProps, Ref> {
 	}
 
 	protected render(): string {
-		const { img, display_name, email, login, first_name, second_name, phone, newPassword, oldPassword, hide } = this.props;
-
+		const { img, display_name, email, login, first_name, second_name, phone, newPassword, oldPassword, hide } =
+			this.props;
 		return `
 		<div>
 		{{{ Back page="login"}}}
@@ -201,20 +199,15 @@ export class PageProfile extends Block<IProfilePageProps, Ref> {
 					className="primary"
 					value="${oldPassword}"
 				}}}
-				
-
 				{{{ Button label="Изменить данные" className="primary" page="login" onClick=onEditProfile }}}
 				{{{ Button label="Выйти из аккаунта" className="grey" page="login" onClick=onLogOut }}}
 		{{/Form}}
-
 				{{#> Popup hide="${hide}"}}
 					<h2 class="text-error">
 						Ошибка при загрузке файла.</br>Попробуйте ещё раз.
 					</h2>
 				{{/Popup}}
 		</div>
-		`
-
+		`;
 	}
 }
-

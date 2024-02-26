@@ -24,7 +24,7 @@ export function navigate(page?: keyof typeof PAGES): void {
 		const component = new Component();
 		app?.append(component.getContent()!);
 	} else {
-		navigate("notFound")
+		navigate('notFound');
 	}
 }
 

@@ -1,17 +1,16 @@
-import Block from '../../../utils/Block'
-import { IChat } from '../../../utils/constants'
-import './chat-content.less'
+import Block from '../../../utils/Block';
+import { IChat } from '../../../utils/constants';
+import './chat-content.less';
 
 interface IChatContentProps {
-	chats: IChat[]
+	chats: IChat[];
 }
-
 
 export class ChatContent extends Block<IChatContentProps> {
 	constructor(props: IChatContentProps) {
 		super({
-			...props
-		})
+			...props,
+		});
 	}
 
 	protected render(): string {
@@ -20,6 +19,6 @@ export class ChatContent extends Block<IChatContentProps> {
 				{{{ChatHeader chats=chats }}}
 				{{{ChatList chats=chats }}}
 		    </div>
-		`
+		`;
 	}
 }
