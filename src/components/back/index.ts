@@ -1,1 +1,1 @@
-export { default as Back } from './back.hbs?raw';
+export { Back } from './Back.ts';

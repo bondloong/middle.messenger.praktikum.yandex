@@ -1,4 +1,4 @@
-import { ProfileIcon, CameraImage } from '../assets/images/index'
+import { CameraImage, ProfileIcon } from '../assets/images/index'
 
 export interface IMessageType {
 	login: string;
@@ -8,40 +8,43 @@ export interface IMessageType {
 	isReading?: boolean;
 }
 
+
 export interface IMessages {
+	messages: IMessageType[];
+}
+
+export interface IChatInfo extends IMessages {
 	chatId: string;
 	chatName: string;
 	avatar: string;
-	chatMessages: IMessageType[];
 }
 
-export const messages: IMessages[] = [
-	{
-		chatId: "444",
-		chatName: "Вадим",
-		avatar: ProfileIcon,
-		chatMessages: [
-			{
-				login: "@Vadim",
-				text: `Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+export const chat: IChatInfo = {
+	chatId: "444",
+	chatName: "Вадим",
+	avatar: ProfileIcon,
+	messages: [
+		{
+			login: "@Vadim",
+			text: `Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
 
 				Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.`,
-				date: "12:00"
-			},
-			{
-				login: "@Vadim",
-				file: CameraImage,
-				date: "12:10"
-			},
-			{
-				login: "@You",
-				text: "Круто!",
-				date: "13:20",
-				isReading: true
-			}
-		]
-	}
-]
+			date: "12:00"
+		},
+		{
+			login: "@Vadim",
+			file: CameraImage,
+			date: "12:10"
+		},
+		{
+			login: "@You",
+			text: "Круто!",
+			date: "13:20",
+			isReading: true
+		}
+	]
+}
+
 
 
 export interface IChat {

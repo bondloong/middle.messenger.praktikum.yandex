@@ -1,7 +1,5 @@
 export { PageLogin } from './login'
 export { PageRegister } from './register'
-export { ErrorPage } from './error'
+export { PageError } from './error'
 export { PageProfile } from './profile'
-export { PageProfileChange } from './profile-change'
 export { PageChat } from './chat'
-export { PageChatUser } from './chat-user'

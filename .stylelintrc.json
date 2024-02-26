@@ -1,0 +1,20 @@
+{
+	"extends": "stylelint-config-standard-less",
+	"plugins": [
+		"stylelint-less",
+		"stylelint-order",
+		"stylelint-prettier"
+	],
+	"rules": {
+		"font-family-name-quotes": "always-where-required",
+		"at-rule-no-unknown": null,
+		"scss/at-rule-no-unknown": true,
+		"selector-class-pattern": null,
+		"no-descending-specificity": null
+	},
+	"example": "./src/index.ts",
+	"ignoreFiles": [
+		"dist/*",
+		"node_modules/*"
+	]
+}

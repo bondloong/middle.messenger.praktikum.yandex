@@ -1,1 +1,1 @@
-export { default as PageChat } from './chat.hbs?raw';
+export { PageChat } from './chat.ts';

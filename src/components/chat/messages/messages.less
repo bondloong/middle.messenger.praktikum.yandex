@@ -1,0 +1,112 @@
+@import '../../../styles/variables.less';
+@import '../../../styles/mixins.less';
+
+.messages {
+	padding: 10px;
+	height: 100vh;
+	position: relative;
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+	&__null-content {
+		align-self: center; 
+		padding-top: 40vh;
+		.M_Grey();
+	}
+	&__header {
+		display: flex;
+	    justify-content: space-between;
+		padding-bottom: 12px;
+		.Grey-BB();
+	}
+	&__list {
+		padding: 12px 0;
+		display: flex;
+    	flex-direction: column;
+		gap: 12px;
+	}
+	&__item {
+		width: fit-content;
+		max-width: 45%;
+		padding: 12px;
+	}
+
+	&__date {
+		text-align: center;
+		padding: 12px 0;
+		.M_Grey();
+	}
+
+	&__sender {
+		position: relative;
+	    display: flex;
+	    align-items: center;
+	    gap: 8px;
+	}
+	&__actions {
+		display: flex;
+	    align-items: center;
+	    gap: 8px;
+	}
+
+	&_to-you {
+		background-color: @grey-bg-color-second;
+		border-radius: 12px 12px 12px 0;
+	}
+
+	&_from-you {
+		align-self: flex-end;
+		background-color: @grey-bg-color-primary;
+		border-radius: 12px 12px 0 12px;
+	}
+
+	&__text {
+		
+	}
+	&__file {
+		position: relative;
+		img {
+			width: 100%;
+		}
+
+		&-send-settings {
+			position: absolute;
+		    top: -25px;
+		    padding: 15px;
+			display: flex;
+    		flex-direction: column;
+			gap: 15px;
+			box-shadow: @shadow;
+			border-radius: @radius;
+			transform: translateY(-100%);
+			div {
+				display: flex;
+			    align-items: center;
+			    gap: 15px;
+				&:hover {
+					cursor: pointer;
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+
+	&__time {
+
+	}
+
+	&__footer {
+		display: flex;
+	    align-items: center;
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    z-index: 99;
+	    background-color: @white-color;
+	    margin: 0px 12px;
+    	padding: 12px 0px;
+		gap: 8px;
+		.Grey-BT()
+	}
+}

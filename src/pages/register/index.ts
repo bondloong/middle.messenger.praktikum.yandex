@@ -1,1 +1,1 @@
-export { default as PageRegister } from './register.hbs?raw';
+export { PageRegister } from './register.ts';
