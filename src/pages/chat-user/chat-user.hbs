@@ -1,0 +1,135 @@
+<main class="chat">
+  <div class="chat__content">
+    <div class="chat__header">
+      <div class="chat__search">
+        <div>
+          <img src={{profile.avatar}} alt={{profile.first_name}} class="avatar" />
+        </div>
+        <div style="width: 100%">
+          {{> InputText placeholder="Поиск" icon=SearchIcon }}
+        </div>
+        <div>
+          {{> Button class="primary radius-50" icon=CreateChatIcon }}
+        </div>
+      </div>
+      <div class="chat__favourites">
+        {{#each (sortByUnreading chats) as |chat|}}
+        <img alt={{chatName}} src={{avatar}} class="avatar {{#if unReading}}unreading{{/if}}" />
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="chat__list">
+      {{#each chats}}
+      <div class="chat__item-wrapper {{#if target}}chat__item-wrapper_target{{/if}}">
+      {{#if target}} 
+        <div class="chat__item-settings chat__item-settings_left">
+          <div>Открыть профиль</div>
+          <div>Удалить из друзей</div>
+          <div>Добавить в избранное</div>
+          <div>Удалить чат</div>
+        </div> 
+      {{/if}}
+      <div class="chat__item">
+        <div class="chat__info">
+          <img alt={{chatName}} src={{avatar}} class="avatar" />
+          <div class="chat__last-message">
+            <div class="chat__name">{{chatName}}</div>
+            <span class="chat__last-writter-login">{{formatLastWritterLogin lastWritterLogin}}</span>
+            <span class="chat__last-writter-text">{{lastMessage}}</span>
+          </div>
+        </div>
+        <div class="chat__status">
+          <div class="chat__upd">{{upd}}</div>
+          {{#if unReading}}
+          <div class="chat__unreading unreading">{{unReading}}</div>
+          {{/if}}
+        </div>
+      </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+
+
+  <div class="messages">
+    {{#if openedChatId}}
+    {{#each (getMessagesByChatId messages openedChatId) as |message|}}
+    <div class="messages__header">
+      <div class="messages__sender">
+    
+        <div class="chat__item-settings chat__item-settings_top">
+          <div>Список пользователей</div>
+          <div>Изменение аватара чата</div>
+          <div>Удаление чата</div>
+        </div> 
+    
+        <img alt={{chatName}} src={{avatar}} class="avatar" />
+        <div class="messages__name">{{chatName}}</div>
+      </div>
+      <div class="messages__actions">
+        {{> Button class="grey button__grey_active" icon=../PlusIcon title="Добавить в закладки"}}
+        {{> Button class="primary button__grey_active " icon=../PlusIcon label="Добавить в друзья" }}
+      </div>
+    </div>
+    <div class="messages__list">
+      <div class="messages__date">
+        19 июня
+      </div>
+      {{#each chatMessages}}
+      <div class="messages__item {{ifMessageFromYou login}}">
+        {{#if text}}
+        <div class="messages__text">
+          {{nl2br text}}
+        </div>
+        {{/if}}
+        {{#if file}}
+        <div class="messages__file">
+          <img src={{file}} alt="image">
+        </div>
+        {{/if}}
+        <div class="messages__time chat__upd {{#if file}}messages_have-file{{/if}}">
+          <span style="float: right; padding-top: 12px;" class="{{#if isReading}}text-primary{{/if}}">{{#if isReading}}<img src={{../../ReadingStatusIcon}} alt="">{{/if}}{{date}}</span>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    
+    <div class="messages__footer">
+      <div>
+        <div class="messages__file-send-settings">
+            <div>
+              <img alt="icon" src={{../PhotoVideoIcon}} class="icon" />
+              <div>Фото или Видео</div>
+            </div>
+            <div>
+              <img alt="icon" src={{../FileIcon}} class="icon" />
+              <div>Файл</div>
+            </div>
+            <div>
+              <img alt="icon" src={{../LocationIcon}} class="icon" />
+              <div>Локация</div>
+            </div>
+          </div>
+        {{> Button class=" radius-50 button__active" icon=../ClipIcon }}
+        </div>
+      <div style="width: 100%">{{> InputText placeholder="Сообщение" }}</div>
+      <div>{{> Button class="primary radius-50" style="transform: rotate(180deg);" icon=../ArrowIcon }}</div>
+    </div>
+    {{/each}}
+    {{else}}
+        <span class="messages__null-content">Выберите чат чтобы отправить сообщение</span>
+    {{/if}}
+
+    {{#if deleteUser}}
+    {{#> Popup}}
+      <h2>
+        Вы уверены, что хотите удалить</br>чат с пользователем?
+      </h2>
+      {{> Button class="primary " label="Удалить чат" }}
+      {{> Button class="grey " label="Отменить" id="popup-close" }}
+    {{/Popup}}
+    {{/if}} 
+  </div>
+</main>

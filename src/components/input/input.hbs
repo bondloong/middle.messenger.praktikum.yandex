@@ -1,0 +1,17 @@
+<div class="input-block">
+  <label class="input-block__label">
+    <div class="input-block__label-error">{{error}}</div>
+    <input
+      class="input-block__input input__{{class}}"
+      placeholder="{{placeholder}}"
+      value="{{value}}"
+      type="{{type}}"
+      name="{{name}}"
+      title="{{title}}"
+      {{#if isPhone}}
+        pattern="^\+7 \d{3} \d{3} \d{2} \d{2}$"
+      {{/if}}
+      {{#if disabled}}disabled{{/if}} 
+    />
+  </label>
+</div>

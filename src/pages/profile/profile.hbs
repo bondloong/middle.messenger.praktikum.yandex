@@ -1,0 +1,13 @@
+{{> Back page="chat"}}
+{{#> Form}}
+<img src="{{avatar}}" alt={{first_name}} class="profile__avatar avatar" />
+{{> Input placeholder="Почта" label="" class="grey" type="text" name="email" value="test@ya.ru" }}
+{{> Input placeholder="Логин" label="" class="grey" type="text" name="login" value="@You" }}
+{{> Input placeholder="Имя" label="" class="grey" type="text" name="first_name" value="Alexey" }}
+{{> Input placeholder="Фамилия" label="" class="grey" type="text" name="second_name" value="Gorbachev" }}
+{{> Input placeholder="Отображаемое имя" label="" class="grey" type="text" name="display_name" value="Алексей" }}
+{{> Input placeholder="Телефон" class="grey" type="tel" name="phone" title="Введите номер телефона в формате +7 999 999 99 99" isPhone=true value="+7 999 999 99 99" }}
+{{> Input placeholder="Пароль" class="grey" type="password"  name="newPassword" }}
+{{> Button label="Изменить данные" class="primary" page="changeProfile"}}
+{{> Button label="Выйти из аккаунта" class="grey" page="login"}}
+{{/Form}} 

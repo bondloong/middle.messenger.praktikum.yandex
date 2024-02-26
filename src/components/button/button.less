@@ -1,0 +1,53 @@
+@import '../../styles/mixins.less';
+@import '../../styles/variables.less';
+
+.button {
+  width: 100%;
+  max-width: 200px;
+  border-radius: @radius;
+  padding: 12px;
+  appearance: none;
+  border: 0;
+  margin: 0 auto;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: inherit;
+
+  .M_Regular();
+
+  &__primary {
+    background-color: @primary-color;
+    color: @white-color;
+  }
+  &__active {
+      box-shadow: @shadow;
+  }
+
+  &__grey {
+    background-color: @grey-color;
+    color: @white-color;
+
+    &_active {
+      background-color: @low-grey-color;
+      color: @grey-color;
+
+      img {
+        filter: grayscale(100%) brightness(80%);
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  &:active {
+    box-shadow: @shadow;
+  }
+}

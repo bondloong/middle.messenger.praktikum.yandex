@@ -1,0 +1,12 @@
+export { default as ArrowIcon } from '../arrow.svg';
+export { default as ClipIcon } from '../clip.svg';
+export { default as CreateChatIcon } from '../create-chat.svg';
+export { default as FileIcon } from '../file.svg';
+export { default as LocationIcon } from '../location.svg';
+export { default as NewProfileIcon } from '../new-profile.svg';
+export { default as PhotoVideoIcon } from '../photo-video.svg';
+export { default as PlusIcon } from '../plus.svg';
+export { default as ProfileIcon } from '../profile.svg';
+export { default as ReadingStatusIcon } from '../reading-status.svg';
+export { default as SearchIcon } from '../search-icon.svg';
+export { default as CameraImage } from './camera.png';
