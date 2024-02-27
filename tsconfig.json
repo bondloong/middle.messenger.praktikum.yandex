@@ -20,8 +20,11 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "sourceMap": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "typeRoots": ["./node_modules/@types", "./path_to_your_custom_definitions"],
   },
-  "include": ["src", "server.js"]
-  
+  "include": [
+    "src", 
+    "server.js",
+    "src/custom.d.ts"]
 }
