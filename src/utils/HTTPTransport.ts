@@ -10,7 +10,7 @@ enum METHODS {
 	POST = 'POST',
 	PUT = 'PUT',
 	DELETE = 'DELETE',
-};
+}
 
 function queryStringify(data: Record<string, unknown>): string {
 	if (typeof data !== 'object') {

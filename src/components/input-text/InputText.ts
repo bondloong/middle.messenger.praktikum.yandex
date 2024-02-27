@@ -1,5 +1,5 @@
 import Block from '../../utils/Block';
-import './input-text.less'
+import './input-text.less';
 
 interface IInputTextProps {
 	icon?: string;

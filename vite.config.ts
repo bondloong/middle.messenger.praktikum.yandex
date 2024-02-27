@@ -4,9 +4,9 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	root: resolve(__dirname, 'src'),
 	build: {
-		outDir: '../dist'
+		outDir: '../dist',
 	},
-	base: "./",
+	base: './',
 	server: {
 		port: 3000,
 	},

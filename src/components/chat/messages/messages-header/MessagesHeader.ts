@@ -53,8 +53,15 @@ export class MessagesHeader extends Block<IMessagesHeaderProps> {
 					<div class="messages__name">${chatName}</div>
 		          </div>
 		          <div class="messages__actions">	
-		            {{{ Button className="grey" icon="${PlusIcon}" title="Добавить в закладки" id="bookmark" onClick=changeBookmarkStatus }}}
-					{{{ Button className="primary "icon="${PlusIcon}" label="Добавить в друзья" id="frendship" onClick=changeFriendStatus }}}
+		            {{{ Button  className="grey" 
+                            icon="${PlusIcon}" 
+                            title="Добавить в закладки" 
+                            id="bookmark" 
+                            onClick=changeBookmarkStatus }}}
+					      {{{ Button  className="primary "icon="${PlusIcon}" 
+                            label="Добавить в друзья" 
+                            id="frendship" 
+                            onClick=changeFriendStatus }}}
 		          </div>
 	        </div>
 		`;

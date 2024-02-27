@@ -29,5 +29,4 @@ registerComponent('MessagesFooter', Components.MessagesFooter);
 registerComponent('MessagesList', Components.MessagesList);
 registerComponent('MessagesItem', Components.MessagesItem);
 
-
 document.addEventListener('DOMContentLoaded', () => navigate('login'));

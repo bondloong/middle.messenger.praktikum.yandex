@@ -9,11 +9,11 @@ export type RefType = {
 export interface BlockClass<P extends object, R extends RefType> {
 	componentName?: string;
 
-	new(props: P): Block<P, R>;
+	new (props: P): Block<P, R>;
 }
 
 interface BlockConstructable<Props extends object, R extends RefType> {
-	new(props: Props): Block<Props, R>;
+	new (props: Props): Block<Props, R>;
 }
 
 type CompileChildren<P extends object, R extends RefType> = {
@@ -96,7 +96,7 @@ class Block<Props extends object, Refs extends RefType = RefType> {
 		this.componentDidMount();
 	}
 
-	componentDidMount() { }
+	componentDidMount() {}
 
 	public dispatchComponentDidMount() {
 		this.eventBus().emit(Block.EVENTS.FLOW_CDM);
@@ -120,7 +120,7 @@ class Block<Props extends object, Refs extends RefType = RefType> {
 		this.componentWillUnmount();
 	}
 
-	componentWillUnmount() { }
+	componentWillUnmount() {}
 
 	setProps = (nextProps: object) => {
 		if (!nextProps) {
@@ -170,7 +170,7 @@ class Block<Props extends object, Refs extends RefType = RefType> {
 		this.getContent()!.style.display = 'none';
 	}
 
-	protected init() { }
+	protected init() {}
 
 	protected componentDidUpdate(oldProps: Props, newProps: Props) {
 		if (oldProps || newProps) {

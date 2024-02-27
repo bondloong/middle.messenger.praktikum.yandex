@@ -47,7 +47,10 @@ export class MessagesFooter extends Block<IMessagesFooterProps, Ref> {
 			              <div>Локация</div>
 			            </div>
 			        </div>
-                    {{{ Button className=" radius-50" icon="${ClipIcon}" id="file-send-settings" onClick=showFileSendSettings }}}
+                    {{{ Button  className=" radius-50" 
+                                icon="${ClipIcon}" 
+                                id="file-send-settings" 
+                                onClick=showFileSendSettings }}}
                 </div>
 				<div style="width: 100%">
 					{{{InputText

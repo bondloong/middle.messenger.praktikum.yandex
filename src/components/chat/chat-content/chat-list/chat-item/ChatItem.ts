@@ -44,7 +44,11 @@ export class ChatItem extends Block<IChatItemProps> {
 			      {{/if}}
 			      <div class="chat__item">
 			        <div class="chat__info">
-			          {{{ Avatar src="${avatar}" id="${chatId}" alt="${chatName}" unReading=${unReading} onClick=onProfile }}}
+			          {{{ Avatar 	src="${avatar}" 
+					  				id="${chatId}" 
+									alt="${chatName}" 
+									unReading=${unReading} 
+									onClick=onProfile }}}
 			          <div class="chat__last-message">
 			            <div class="chat__name">${chatName}</div>
 			        	{{{ LastWritter lastWritterLogin="${lastWritterLogin}" }}}

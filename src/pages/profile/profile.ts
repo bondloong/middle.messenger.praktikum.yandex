@@ -6,7 +6,7 @@ import * as validators from '../../utils/validators.ts';
 import './profile.less';
 
 type Ref = {
-	//avatar: Avatar;
+	// avatar: Avatar;
 	email: InputField;
 	login: InputField;
 	first_name: InputField;

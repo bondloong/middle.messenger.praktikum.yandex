@@ -1,4 +1,4 @@
-import Block from '../../../../utils/Block'
+import Block from '../../../../utils/Block';
 import { ProfileIcon, SearchIcon, CreateChatIcon } from '../../../../assets/index.ts';
 import { InputText } from '../../../input-text/InputText.ts';
 import { navigate } from '../../../../utils/navigate.ts';
@@ -6,26 +6,25 @@ import { IChat } from '../../../../utils/constants.ts';
 
 type Ref = {
 	search: InputText;
-}
+};
 
 interface IChatHeaderProps {
-	chats: IChat[]
+	chats: IChat[];
 	profileImg: string;
 	searchImg: string;
 	createChatImg: string;
 	search: string;
-	onProfile: (e: any) => void
+	onProfile: (e: any) => void;
 }
 
 export class ChatHeader extends Block<IChatHeaderProps, Ref> {
-
 	constructor(props: IChatHeaderProps) {
 		const sortedChats = props.chats.slice().sort((a, b) => b.unReading - a.unReading);
 
 		super({
 			...props,
 			profileImg: ProfileIcon,
-			search: "",
+			search: '',
 			searchImg: SearchIcon,
 			createChatImg: CreateChatIcon,
 			chats: sortedChats,
@@ -33,12 +32,11 @@ export class ChatHeader extends Block<IChatHeaderProps, Ref> {
 				e.preventDefault();
 				navigate('profile');
 			},
-		})
-
+		});
 	}
 
 	protected render(): string {
-		const { profileImg, search, searchImg, createChatImg, } = this.props
+		const { profileImg, search, searchImg, createChatImg } = this.props;
 		return `
 			<div class="chat__header">
         		<div class="chat__search">
@@ -68,6 +66,6 @@ export class ChatHeader extends Block<IChatHeaderProps, Ref> {
 				</div>
 		      </div>
       		</div>
-		`
+		`;
 	}
 }

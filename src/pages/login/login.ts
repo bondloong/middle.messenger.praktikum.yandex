@@ -2,7 +2,7 @@ import { InputField } from '../../components/index.ts';
 import Block from '../../utils/Block.ts';
 import { navigate } from '../../utils/navigate.ts';
 import * as validators from '../../utils/validators.ts';
-import './login.less'
+import './login.less';
 
 type Ref = {
 	login: InputField;
@@ -83,6 +83,6 @@ export class PageLogin extends Block<ILoginPageProps, Ref> {
 				{{{ Link label="Регистрация" className="link" page="register" onClick=onRegistration}}}
 				{{{ Link label="О нет!" className="link" page="error" onClick=onErrorPage}}}
 			{{/Form}}
-		`
+		`;
 	}
 }
