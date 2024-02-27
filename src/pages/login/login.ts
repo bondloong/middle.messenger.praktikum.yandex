@@ -49,7 +49,7 @@ export class PageLogin extends Block<ILoginPageProps, Ref> {
 			},
 			onErrorPage: (event: Event) => {
 				event.preventDefault();
-				/* @ts-ignore */
+				/* @ts-expect-error*/
 				// Для проверки 404 страницы
 				navigate('asd');
 			},

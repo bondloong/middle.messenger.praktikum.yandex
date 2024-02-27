@@ -30,7 +30,8 @@
 		"import-notation": null,
 		"declaration-block-no-redundant-longhand-properties": null,
 		"color-function-notation": "modern",
-		"alpha-value-notation": "number"
+		"alpha-value-notation": "number",
+		"@typescript-eslint/no-var-requires": "off"
 	},
 	"example": "./src/index.ts"
 }
