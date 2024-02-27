@@ -10,16 +10,6 @@
 		"stylelint-order",
 		"stylelint-prettier"
 	],
-	"overrides": [
-		{
-			"files": [
-				"*.js"
-			],
-			"rules": {
-				"@typescript-eslint/no-var-requires": "off"
-			}
-		}
-	],
 	"rules": {
 		"font-family-name-quotes": "always-where-recommended",
 		"at-rule-no-unknown": null,
@@ -30,8 +20,7 @@
 		"import-notation": null,
 		"declaration-block-no-redundant-longhand-properties": null,
 		"color-function-notation": "modern",
-		"alpha-value-notation": "number",
-		"@typescript-eslint/no-var-requires": "off"
+		"alpha-value-notation": "number"
 	},
 	"example": "./src/index.ts"
 }
