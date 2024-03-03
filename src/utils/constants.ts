@@ -1,4 +1,4 @@
-import { ProfileIcon, CameraImage } from '../assets/images/index'
+import { CameraImage, ProfileIcon } from '../assets/images/index';
 
 export interface IMessageType {
 	login: string;
@@ -9,40 +9,47 @@ export interface IMessageType {
 }
 
 export interface IMessages {
+	messages: IMessageType[];
+}
+
+export interface IChatInfo extends IMessages {
 	chatId: string;
 	chatName: string;
 	avatar: string;
-	chatMessages: IMessageType[];
 }
 
-export const messages: IMessages[] = [
-	{
-		chatId: "444",
-		chatName: "Вадим",
-		avatar: ProfileIcon,
-		chatMessages: [
-			{
-				login: "@Vadim",
-				text: `Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+export const chat: IChatInfo = {
+	chatId: '444',
+	chatName: 'Вадим',
+	avatar: ProfileIcon,
+	messages: [
+		{
+			login: '@Vadim',
+			text: `Привет! Смотри, тут всплыл интересный кусок 
+      лунной космической истории — НАСА в какой-то момент попросила 
+      Хассельблад адаптировать модель SWC для полетов на Луну. 
+      Сейчас мы все знаем что астронавты летали с моделью 500 EL — 
+      и к слову говоря, все тушки этих камер все еще находятся на поверхности 
+      Луны, так как астронавты с собой забрали только кассеты с пленкой.
 
-				Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.`,
-				date: "12:00"
-			},
-			{
-				login: "@Vadim",
-				file: CameraImage,
-				date: "12:10"
-			},
-			{
-				login: "@You",
-				text: "Круто!",
-				date: "13:20",
-				isReading: true
-			}
-		]
-	}
-]
-
+				Хассельблад в итоге адаптировал SWC для космоса, но что-то 
+        пошло не так и на ракету они так никогда и не попали. 
+        Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.`,
+			date: '12:00',
+		},
+		{
+			login: '@Vadim',
+			file: CameraImage,
+			date: '12:10',
+		},
+		{
+			login: '@You',
+			text: 'Круто!',
+			date: '13:20',
+			isReading: true,
+		},
+	],
+};
 
 export interface IChat {
 	chatId: string;
@@ -57,115 +64,115 @@ export interface IChat {
 
 export const chats: IChat[] = [
 	{
-		chatId: "111",
+		chatId: '111',
 		avatar: ProfileIcon,
-		chatName: "Андрей",
-		lastWritterLogin: "@Andrev",
-		lastMessage: "Изображение",
+		chatName: 'Андрей',
+		lastWritterLogin: '@Andrev',
+		lastMessage: 'Изображение',
 		unReading: 2,
-		upd: "пн"
+		upd: 'пн',
 	},
 	{
-		chatId: "222",
+		chatId: '222',
 		avatar: ProfileIcon,
-		chatName: "Киноклуб",
-		lastWritterLogin: "@You",
-		lastMessage: "стикер",
+		chatName: 'Киноклуб',
+		lastWritterLogin: '@You',
+		lastMessage: 'стикер',
 		unReading: 0,
-		upd: "вт"
+		upd: 'вт',
 	},
 	{
-		chatId: "333",
+		chatId: '333',
 		avatar: ProfileIcon,
-		chatName: "Илья",
-		lastWritterLogin: "@Ilya",
-		lastMessage: "Друзья, у меня для вас особенный выпуск новостей!...",
+		chatName: 'Илья',
+		lastWritterLogin: '@Ilya',
+		lastMessage: 'Друзья, у меня для вас особенный выпуск новостей!...',
 		unReading: 2,
-		upd: "10:49"
+		upd: '10:49',
 	},
 	{
-		chatId: "444",
+		chatId: '444',
 		avatar: ProfileIcon,
-		chatName: "Вадим",
-		lastWritterLogin: "@You",
-		lastMessage: "Круто!",
+		chatName: 'Вадим',
+		lastWritterLogin: '@You',
+		lastMessage: 'Круто!',
 		unReading: 0,
-		upd: "10:49",
-		target: true
+		upd: '10:49',
+		target: true,
 	},
 	{
-		chatId: "555",
+		chatId: '555',
 		avatar: ProfileIcon,
-		chatName: "тет-а-теты",
-		lastWritterLogin: "@tat",
-		lastMessage: "И Human Interface Guidelines и Material Design рекомендуют...",
+		chatName: 'тет-а-теты',
+		lastWritterLogin: '@tat',
+		lastMessage: 'И Human Interface Guidelines и Material Design рекомендуют...',
 		unReading: 0,
-		upd: "10:49"
+		upd: '10:49',
 	},
 	{
-		chatId: "666",
+		chatId: '666',
 		avatar: ProfileIcon,
-		chatName: "1, 2, 3",
-		lastWritterLogin: "@123",
-		lastMessage: "Миллионы россиян ежедневно проводят десятки часов свое...",
+		chatName: '1, 2, 3',
+		lastWritterLogin: '@123',
+		lastMessage: 'Миллионы россиян ежедневно проводят десятки часов свое...',
 		unReading: 0,
-		upd: "10:49"
+		upd: '10:49',
 	},
 	{
-		chatId: "777",
+		chatId: '777',
 		avatar: ProfileIcon,
-		chatName: "1, 2, 3",
-		lastWritterLogin: "@123",
-		lastMessage: "Миллионы россиян ежедневно проводят десятки часов свое...",
+		chatName: '1, 2, 3',
+		lastWritterLogin: '@123',
+		lastMessage: 'Миллионы россиян ежедневно проводят десятки часов свое...',
 		unReading: 0,
-		upd: "10:49"
+		upd: '10:49',
 	},
 	{
-		chatId: "888",
+		chatId: '888',
 		avatar: ProfileIcon,
-		chatName: "Design Destroyer",
-		lastWritterLogin: "@DD",
-		lastMessage: "В 2008 году художник Jon Rafman  начал собирать...",
+		chatName: 'Design Destroyer',
+		lastWritterLogin: '@DD',
+		lastMessage: 'В 2008 году художник Jon Rafman  начал собирать...',
 		unReading: 0,
-		upd: "10:49"
+		upd: '10:49',
 	},
 	{
-		chatId: "999",
+		chatId: '999',
 		avatar: ProfileIcon,
-		chatName: "Day.",
-		lastWritterLogin: "@DD",
-		lastMessage: "Так увлёкся работой по курсу, что совсем забыл его анонсир...",
+		chatName: 'Day.',
+		lastWritterLogin: '@DD',
+		lastMessage: 'Так увлёкся работой по курсу, что совсем забыл его анонсир...',
 		unReading: 0,
-		upd: "0:49"
+		upd: '0:49',
 	},
 	{
-		chatId: "000",
+		chatId: '000',
 		avatar: ProfileIcon,
-		chatName: "Day.",
-		lastWritterLogin: "@DD",
-		lastMessage: "Так увлёкся работой по курсу, что совсем забыл его анонсир...",
+		chatName: 'Day.',
+		lastWritterLogin: '@DD',
+		lastMessage: 'Так увлёкся работой по курсу, что совсем забыл его анонсир...',
 		unReading: 0,
-		upd: "10:49"
+		upd: '10:49',
 	},
 	{
-		chatId: "1111",
+		chatId: '1111',
 		avatar: ProfileIcon,
-		chatName: "Day.",
-		lastWritterLogin: "@DD",
-		lastMessage: "Так увлёкся работой по курсу, что совсем забыл его анонсир...",
+		chatName: 'Day.',
+		lastWritterLogin: '@DD',
+		lastMessage: 'Так увлёкся работой по курсу, что совсем забыл его анонсир...',
 		unReading: 0,
-		upd: "10:49"
+		upd: '10:49',
 	},
 	{
-		chatId: "2222",
+		chatId: '2222',
 		avatar: ProfileIcon,
-		chatName: "Day.",
-		lastWritterLogin: "@DD",
-		lastMessage: "Так увлёкся работой по курсу, что совсем забыл его анонсир...",
+		chatName: 'Day.',
+		lastWritterLogin: '@DD',
+		lastMessage: 'Так увлёкся работой по курсу, что совсем забыл его анонсир...',
 		unReading: 0,
-		upd: "10:49"
-	}
-]
+		upd: '10:49',
+	},
+];
 
 export interface Iprofile {
 	first_name: string;
@@ -178,12 +185,12 @@ export interface Iprofile {
 	newPassword: string;
 }
 export const profile: Iprofile = {
-	first_name: "Alexey",
-	second_name: "Gorbachev",
+	first_name: 'Alexey',
+	second_name: 'Gorbachev',
 	avatar: ProfileIcon,
-	login: "@You",
-	email: "gorbachev22@yandex.ru",
-	phone: "+7 (999) 999-99-99",
-	oldPassword: "123456",
-	newPassword: "123456"
-}
+	login: '@You',
+	email: 'gorbachev22@yandex.ru',
+	phone: '+7 (999) 999-99-99',
+	oldPassword: '123456',
+	newPassword: '123456',
+};

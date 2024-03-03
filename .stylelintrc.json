@@ -1,0 +1,26 @@
+{
+	"extends": "stylelint-config-standard-less",
+	"ignoreFiles": [
+		"dist/**/*",
+		"node_modules/**/*",
+		"src/styles/style.css"
+	],
+	"plugins": [
+		"stylelint-less",
+		"stylelint-order",
+		"stylelint-prettier"
+	],
+	"rules": {
+		"font-family-name-quotes": "always-where-recommended",
+		"at-rule-no-unknown": null,
+		"rule-empty-line-before": null,
+		"selector-class-pattern": null,
+		"no-descending-specificity": null,
+		"declaration-block-single-line-max-declarations": null,
+		"import-notation": null,
+		"declaration-block-no-redundant-longhand-properties": null,
+		"color-function-notation": "modern",
+		"alpha-value-notation": "number"
+	},
+	"example": "./src/index.ts"
+}

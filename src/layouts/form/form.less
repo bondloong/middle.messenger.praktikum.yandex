@@ -1,0 +1,37 @@
+@import "../../styles/mixins.less";
+@import "../../styles/variables.less";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  gap: 15px;
+  &__avatar {
+    width: 130px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px 60px;
+    box-shadow: 0 0 5px #0000004b;
+    width: 100%;
+    max-width: 400px;
+    gap: 14px;
+    height: fit-content;
+    border-radius: @radius;
+    background: @white-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  &__label {
+    .S_Grey();
+  }
+}

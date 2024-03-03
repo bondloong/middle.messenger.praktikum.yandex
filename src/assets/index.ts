@@ -11,4 +11,4 @@ export {
 	ProfileIcon,
 	ReadingStatusIcon,
 	SearchIcon,
-} from "./images";
+} from './images';

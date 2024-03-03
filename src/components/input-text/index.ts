@@ -1,1 +1,1 @@
-export { default as InputText } from './input-text.hbs?raw';
+export { InputText } from './InputText.ts';

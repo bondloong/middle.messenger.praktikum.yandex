@@ -1,0 +1,4 @@
+/dist
+/node_modules
+/src/custom.d.ts
+/src/styles/style.css
