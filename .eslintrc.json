@@ -40,7 +40,7 @@
         "singleQuote": true,
         "trailingComma": "all",
         "bracketSpacing": true,
-        "endOfLine": "lf",
+        "endOfLine": "auto",
         "overrides": [
           {
             "files": "**/*.hbs",
